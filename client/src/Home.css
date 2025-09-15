@@ -1,0 +1,443 @@
+/* Home.css */
+.home-cover-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.hero-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.6);
+  transition: transform 0.8s ease;
+}
+
+.home-cover-container:hover .hero-img {
+  transform: scale(1.05);
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(13, 110, 253, 0.3) 0%, rgba(0, 0, 0, 0.7) 100%);
+}
+
+.home-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  z-index: 2;
+  width: 100%;
+  padding: 0 20px;
+}
+
+.home-overlay h1 {
+  font-weight: 800;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.home-overlay p {
+  font-size: 1.4rem;
+  margin-bottom: 2.5rem;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.home-overlay .btn {
+  padding: 0.8rem 2rem;
+  font-weight: 600;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+  z-index: 3;
+  position: relative;
+}
+
+.home-overlay .btn-dark {
+  background: linear-gradient(135deg, #212529, #0d6efd);
+  border: none;
+}
+
+.home-overlay .btn-dark:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(13, 110, 253, 0.4);
+}
+
+/* Gallery Section */
+.home-card {
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.home-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+.home-card-body {
+  padding: 0;
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  cursor: pointer;
+  aspect-ratio: 4/3;
+}
+
+.home-card-img-top {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.home-card-body:hover .home-card-img-top {
+  transform: scale(1.1);
+}
+
+/* Overlay for selected image */
+.home-overlayExamples {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.92);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+  padding: 20px;
+  animation: fadeIn 0.3s ease;
+}
+
+.home-overlayExamples img {
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Sponsor Section */
+.home-ourSponsor {
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.home-cover-image1 {
+  max-width: 100%;
+  max-height: 200px;
+  object-fit: contain;
+  filter: brightness(70%);
+  transition: all 0.5s ease;
+}
+
+.home-cover-image1:hover {
+  filter: brightness(100%);
+  transform: scale(1.05);
+}
+
+/* Partner Section Styles */
+.home-partner-section {
+  background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 50%, #e9ecef 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.home-partner-section::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -10%;
+  width: 300px;
+  height: 300px;
+  background: linear-gradient(135deg, rgba(13, 110, 253, 0.1) 0%, rgba(13, 110, 253, 0.05) 100%);
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.home-partner-title {
+  font-weight: 800;
+  letter-spacing: 1px;
+  background: black;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.home-partner-divider {
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(135deg, #0d6efd 0%, #0a58ca 100%);
+  border: none;
+  border-radius: 2px;
+}
+
+.home-partner-card {
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(13, 110, 253, 0.1);
+}
+
+.home-partner-card:hover {
+  transform: translateY(-8px) scale(1.01);
+  box-shadow: 0 25px 60px rgba(13, 110, 253, 0.15);
+}
+
+.partner-decoration {
+  position: absolute;
+  border-radius: 50%;
+  background: linear-gradient(135deg, rgba(13, 110, 253, 0.1) 0%, rgba(13, 110, 253, 0.05) 100%);
+  z-index: 0;
+}
+
+.partner-decoration-1 {
+  width: 120px;
+  height: 120px;
+  top: -30px;
+  left: -30px;
+}
+
+.partner-decoration-2 {
+  width: 80px;
+  height: 80px;
+  bottom: -20px;
+  right: -20px;
+}
+
+.partner-image-container {
+  position: relative;
+  max-width: 100%;
+  padding: 25px;
+  background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 220px;
+}
+
+.home-partner-card:hover .partner-image-container {
+  transform: scale(1.03);
+  box-shadow: 0 12px 30px rgba(13, 110, 253, 0.1);
+}
+
+.home-partner-image {
+  max-height: 180px; /* เพิ่มขนาดจาก 150px เป็น 180px */
+  max-width: 100%;
+  width: auto;
+  object-fit: contain;
+  transition: all 0.4s ease;
+  filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.1));
+  position: relative;
+  z-index: 2;
+}
+
+.home-partner-card:hover .home-partner-image {
+  transform: scale(1.08); /* เพิ่มการขยายเมื่อ hover */
+}
+
+.partner-image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(13, 110, 253, 0.05) 0%, rgba(13, 110, 253, 0.02) 100%);
+  border-radius: 12px;
+  z-index: 1;
+}
+
+.home-partner-name {
+  font-size: 1.8rem;
+  letter-spacing: 1px;
+  position: relative;
+  display: inline-block;
+}
+
+.home-partner-description {
+  color: #6c757d;
+  font-weight: 500;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.partner-features {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+/* Fallback for partner image */
+.home-partner-image[src*="placeholder.com"] {
+  padding: 40px; /* เพิ่ม padding สำหรับ placeholder */
+  background: #f8f9fa;
+  border: 2px dashed #dee2e6;
+  border-radius: 12px;
+  min-width: 400px;
+  min-height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .home-partner-image {
+    max-height: 160px;
+  }
+}
+
+@media (max-width: 992px) {
+  .home-partner-title {
+    font-size: 2.5rem;
+  }
+  
+  .home-partner-image {
+    max-height: 140px;
+  }
+  
+  .partner-image-container {
+    min-height: 200px;
+    padding: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .home-partner-title {
+    font-size: 2.2rem;
+  }
+  
+  .home-partner-card {
+    padding: 2.5rem;
+  }
+  
+  .partner-image-container {
+    padding: 15px;
+    min-height: 180px;
+  }
+  
+  .home-partner-image {
+    max-height: 120px;
+  }
+  
+  .home-partner-name {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .home-partner-title {
+    font-size: 1.8rem;
+  }
+  
+  .home-partner-card {
+    padding: 2rem 1.5rem;
+  }
+  
+  .partner-image-container {
+    padding: 12px;
+    min-height: 150px;
+  }
+  
+  .home-partner-image {
+    max-height: 100px;
+  }
+  
+  .partner-features {
+    gap: 8px;
+  }
+  
+  .partner-feature-badge {
+    padding: 5px 12px;
+    font-size: 0.8rem;
+  }
+  
+  /* สำหรับ placeholder บน mobile */
+  .home-partner-image[src*="placeholder.com"] {
+    padding: 30px;
+    min-width: 300px;
+    min-height: 150px;
+  }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .home-overlay h1 {
+    font-size: 2.8rem;
+  }
+  
+  .home-overlay p {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .home-cover-container {
+    height: 80vh;
+  }
+  
+  .home-overlay h1 {
+    font-size: 2.2rem;
+  }
+  
+  .home-overlay p {
+    font-size: 1.1rem;
+  }
+  
+  .home-card-body {
+    aspect-ratio: 3/2;
+  }
+}
+
+@media (max-width: 576px) {
+  .home-overlay h1 {
+    font-size: 1.9rem;
+  }
+  
+  .home-overlay p {
+    font-size: 1rem;
+  }
+  
+  .home-cover-image1 {
+    max-height: 150px;
+  }
+}

@@ -1,0 +1,88 @@
+/* Car Design specific styles */
+.car-design-cover-container {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Full viewport height */
+  overflow: hidden;
+}
+
+.car-design-background-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image covers the area without distortion */
+  filter: brightness(50%);
+}
+
+.car-design-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Center the text */
+  color: white;
+  text-align: center;
+  z-index: 1; /* Ensure text is above the image */
+}
+
+.car-design-text-overlay {
+  text-align: center; /* Center the overlay text */
+}
+
+.car-design-album {
+  background-color: #f8f9fa; /* Light background for album section */
+}
+
+.car-design-card {
+  display: flex; /* Use flex to maintain card height */
+  flex-direction: column; /* Stack items vertically */
+  overflow: hidden; /* Prevents overflow if image is too large */
+  height: 100%; /* Ensure cards take full height */
+  transition: transform 0.3s; /* Smooth scaling on hover */
+}
+
+.card-text {
+  padding: 1rem;
+}
+
+.car-design-card:hover {
+  transform: scale(1.1); /* Scale the card on hover */
+}
+
+.car-design-card-img-top {
+  width: 100%; /* Full width */
+  height: 200px; /* Fixed height for uniformity */
+  object-fit: cover; /* Cover the space without distortion */
+}
+
+.card-body {
+  flex-grow: 1; /* Allow the body to take available space */
+  display: flex; /* Use flex for centering */
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+}
+
+.car-design-overlayExamples {
+  position: fixed; /* Use fixed positioning for full-screen overlay */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8); 
+  display: flex;
+  flex-direction: column; /* Align items vertically */
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Ensure it's above other content */
+  transition: transform 0.5s ease;
+}
+
+.car-design-selected-image {
+  max-width: 90%; 
+  max-height: 90%; 
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Optional shadow for effect */
+}
+
+.car-design-image-description {
+  color: white; /* Description color */
+  margin-top: 10px; /* Space between image and description */
+  text-align: center; /* Center the description */
+}

@@ -1,0 +1,63 @@
+/* Gallery-specific styles */
+.gallery-title-container {
+  text-align: center;
+}
+
+.gallery-title {
+  color: #343a40; /* Dark text color */
+}
+
+.gallery-description {
+  color: #6c757d; /* Secondary color for description */
+}
+
+.gallery-images-container {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.gallery-images-row {
+  gap: 15px; /* Add space between columns */
+}
+
+.gallery-image-card {
+  transition: transform 0.5s; /* Smooth scaling on hover */
+  overflow: hidden; /* Prevent overflow from images */
+}
+
+.gallery-image-card:hover {
+  transform: scale(1.1); /* Scale the card on hover */
+}
+
+.gallery-image-card-body {
+  height: 200px; /* Fixed height for uniformity */
+}
+
+.gallery-image-card-img {
+  width: 100%; /* Make the image take the full width of the card */
+  height: 100%; /* Set a fixed height for uniformity */
+  object-fit: cover; /* Ensure the image covers the area without distortion */
+}
+
+.gallery-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8); /* Dark overlay */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Ensure it appears above other content */
+}
+
+.gallery-overlay img {
+  max-width: 90%; /* Limit the width */
+  max-height: 90%; /* Limit the height */
+}
+
+.gallery-selected-image {
+  max-width: 100%; /* Ensure it doesn't exceed the window width */
+  max-height: 100%; /* Ensure it doesn't exceed the window height */
+}

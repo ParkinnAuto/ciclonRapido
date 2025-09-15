@@ -1,0 +1,202 @@
+/* Cars.css */
+.cars-header {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  padding-top: 3rem;
+  padding-bottom: 2rem;
+}
+
+.cars-subtitle {
+  color: #6c757d;
+  font-weight: 300;
+}
+
+.header-divider {
+  width: 100px;
+  height: 4px;
+  background: linear-gradient(90deg, #0d6efd, #0dcaf0);
+  border-radius: 2px;
+  margin-top: 1.5rem;
+}
+
+.car-section {
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  margin-bottom: 2rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.car-section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+}
+
+.car-image-container {
+  margin-bottom: 2rem;
+}
+
+.image-wrapper {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.car-image {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.image-wrapper:hover .car-image {
+  transform: scale(1.05);
+}
+
+.car-overlay {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.car-content {
+  padding: 1rem;
+}
+
+.car-title {
+  color: #000000;
+  font-size: 2.2rem;
+  position: relative;
+  display: inline-block;
+}
+
+.car-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 50px;
+  height: 3px;
+  background: #0d6efd;
+  border-radius: 2px;
+}
+
+.car-specs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.spec-item {
+  background: #f8f9fa;
+  padding: 8px 15px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+}
+
+.car-description {
+  text-align: justify;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+
+.racing-series {
+  background: #f8f9fa;
+  padding: 1.2rem;
+  border-radius: 10px;
+}
+
+.racing-series h6 {
+  color: #0d6efd;
+  margin-bottom: 0.8rem;
+}
+
+.racing-series ul {
+  margin-bottom: 0;
+  padding-left: 1.2rem;
+}
+
+.racing-series li {
+  margin-bottom: 0.3rem;
+}
+
+.car-type-badge {
+  padding: 0.6rem 1.5rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+}
+
+.car-type-badge:hover {
+  transform: scale(1.05);
+}
+
+.car-divider {
+  border-top: 2px dashed #dee2e6;
+  margin: 2rem 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .car-title {
+    font-size: 2rem;
+  }
+  
+  .car-image {
+    height: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .car-content {
+    text-align: center;
+  }
+  
+  .car-title::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .car-specs {
+    justify-content: center;
+  }
+  
+  .car-description {
+    text-align: center;
+  }
+  
+  .car-image {
+    height: 250px;
+  }
+}
+
+@media (max-width: 576px) {
+  .cars-header h1 {
+    font-size: 2.2rem;
+  }
+  
+  .car-title {
+    font-size: 1.8rem;
+  }
+  
+  .spec-item {
+    font-size: 0.8rem;
+    padding: 6px 12px;
+  }
+  
+  .car-type-badge {
+    font-size: 0.9rem !important;
+    padding: 0.5rem 1.2rem;
+  }
+  
+  .car-overlay {
+    font-size: 0.7rem;
+    padding: 4px 10px;
+  }
+}

@@ -1,0 +1,103 @@
+/* Hero Section */
+.achievements-cover-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.achievements-first-pic {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(50%);
+}
+
+.achievements-overlay1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  z-index: 1;
+}
+
+/* Gallery */
+.achievements-album {
+  background-color: #f8f9fa;
+}
+
+.achievements-card {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.achievements-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.achievements-card-img-top {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.achievements-card:hover .achievements-card-img-top {
+  transform: scale(1.05);
+}
+
+.achievements-card-body {
+  padding: 15px;
+  text-align: center;
+  font-size: 0.95rem;
+  color: #444;
+}
+
+/* Overlay (fullscreen modal) */
+.achievements-overlayExamples {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+  padding: 20px;
+}
+
+.achievements-close-btn {
+  position: absolute;
+  top: 25px;
+  right: 35px;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.achievements-close-btn:hover {
+  color: #ff4757;
+}
+
+.achievements-selected-image {
+  max-width: 90%;
+  max-height: 80vh;
+  border-radius: 10px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6);
+  margin-bottom: 20px;
+}
+
+.achievements-image-description {
+  color: white;
+  font-size: 1.1rem;
+  text-align: center;
+}

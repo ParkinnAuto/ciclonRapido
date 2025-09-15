@@ -1,0 +1,99 @@
+/* ContactUs.css */
+.contactus-section {
+  background-color: #f8f9fa;
+}
+
+.contactus-title {
+  color: #212529;
+  line-height: 1.3;
+}
+
+.contactus-subtitle {
+  color: #0d6efd;
+  letter-spacing: 2px;
+}
+
+.contactus-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.contactus-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+.contactus-icon-square {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #0d6efd 0%, #0a58ca 100%);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.contactus-card:hover .contactus-icon-square {
+  transform: scale(1.1);
+  background: linear-gradient(135deg, #0a58ca 0%, #084298 100%);
+}
+
+.contactus-icon-title {
+  color: #212529;
+}
+
+.contactus-icon-text {
+  color: #6c757d;
+  font-size: 1.05rem;
+}
+
+.contactus-icon-link {
+  color: #0d6efd;
+  text-decoration: none;
+  font-size: 1.05rem;
+  transition: color 0.2s ease;
+}
+
+.contactus-icon-link:hover {
+  color: #084298;
+  text-decoration: none;
+}
+
+#contactus-icons {
+  border-top: 1px solid #e9ecef;
+  padding-top: 40px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .contactus-title {
+    font-size: 2.2rem !important;
+  }
+  
+  .contactus-card {
+    margin-bottom: 1.5rem;
+  }
+  
+  .contactus-icon-square {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+@media (max-width: 576px) {
+  .contactus-title {
+    font-size: 1.8rem !important;
+  }
+  
+  .contactus-subtitle {
+    font-size: 0.9rem !important;
+  }
+  
+  .contactus-icon-title {
+    font-size: 1.5rem !important;
+  }
+}
