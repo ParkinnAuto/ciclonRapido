@@ -19,7 +19,7 @@ connectDB();
 app.use(
   cors({
     origin: ["http://localhost:3000",
-      "https://your-vercel-url.vercel.app",
+      "https://ciclonrapido.vercel.app",
     ],
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
