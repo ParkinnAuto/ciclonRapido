@@ -20,6 +20,7 @@ app.use(
   cors({
     origin: ["http://localhost:3000",
       "https://ciclonrapido.vercel.app",
+      "https://ciclon-rapido-pgca.vercel.app",
     ],
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
