@@ -1,4 +1,4 @@
-const BASE_URL = "http://localhost:5000/api";
+const BASE_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:5000/api";;
 
 // 🔥 GENERIC FETCH HANDLER (สำคัญมาก)
 async function fetcher(endpoint: string) {

@@ -18,7 +18,9 @@ connectDB();
 // ✅ connect with frontend
 app.use(
   cors({
-    origin: ["http://localhost:3000"],
+    origin: ["http://localhost:3000",
+      "https://your-vercel-url.vercel.app",
+    ],
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
   })
