@@ -22,7 +22,7 @@ app.use(
       "https://ciclonrapido.vercel.app",
       "https://ciclon-rapido-pgca.vercel.app",
     ],
-    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+    methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
   })
 );

@@ -10,6 +10,9 @@ export default function AdminLogin() {
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
 
+  const API_URL =
+  process.env.NEXT_PUBLIC_API_URL || "http://localhost:5000/api";
+
   const handleLogin = async () => {
     try {
       if (!email || !password) {
@@ -19,7 +22,7 @@ export default function AdminLogin() {
 
       setLoading(true);
 
-      const res = await fetch("http://localhost:5000/api/auth/login", {
+      const res = await fetch(`${API_URL}/auth/login`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
