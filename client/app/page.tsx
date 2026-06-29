@@ -36,7 +36,7 @@ export default async function Home() {
         
         {/* 🔥 dynamic hero */}
         <img
-          src="/images/hero.png"
+          src="/images/hero.webp"
           alt="hero"
           className="
             absolute inset-0 w-full h-full object-cover
